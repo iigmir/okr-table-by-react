@@ -22,15 +22,22 @@ class Week extends React.Component {
     {
         this.setState({ task_value: event.target.value });
     }
+    delete_item({ event, index })
+    {
+        let new_list = this.state.list;
+        new_list.splice(index, 1);
+        this.setState({ list: new_list });
+    }
     
     render()
     {
         return (
         <div>
-            <MyList list={ this.state.list } />
+            <MyList list={ this.state.list } delete_item={ this.delete_item } />
+            {/* delete_item */}
             <Form onSubmit={ this.add_tasks.bind(this) }>
                 <Form.Group inline>
-                    <Form.Input defaultValue={ this.state.task_value } onChange={ this.change_task_value } />
+                    <Form.Input defaultValue={ this.state.task_value } onChange={ this.change_task_value.bind(this) } />
                     <Form.Button content="Add weekly target" />
                 </Form.Group>
             </Form>
