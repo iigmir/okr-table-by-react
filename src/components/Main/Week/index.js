@@ -1,14 +1,14 @@
 import React from "react";
-import { List, Form } from "semantic-ui-react";
+import { Form } from "semantic-ui-react";
+import MyList from "./lists.js";
 
 export default props =>
 {
     let add_tasks = () => console.log("Submitted");
-    let lists = [ "Apples", "Banana", props.src ];
-    let list_component = lists.map( (item, index) => <List.Item key={index}>{ item }</List.Item> );
+    let list = [ "Apples", "Banana", props.src ];
     return (
         <div>
-            <List bulleted> { list_component } </List>
+            <MyList list={list} />
             <Form onSubmit={add_tasks}>
                 <Form.Group inline>
                     <Form.Input placeholder="Add weekly target for OKR" />
