@@ -1,10 +1,9 @@
 import React from "react";
-import { Container, Grid, Image } from "semantic-ui-react";
-
-const Week = props => (<Image src={props.src} />);
-const OKR = props => (<Image src={props.src} />);
-const Month = props => (<Image src={props.src} />);
-const Targets = props => (<Image src={props.src} />);
+import { Container, Grid } from "semantic-ui-react";
+import Week from "./Week.js";
+import OKR from "./OKR.js";
+import Month from "./Month.js";
+import Targets from "./Targets.js";
 
 const Main = () =>
 {
