@@ -1,20 +1,15 @@
 import React from "react";
-import { Menu } from "semantic-ui-react";
+import { Menu, Image } from "semantic-ui-react";
 
-function Navigator()
+function Navigator(props)
 {
     return (
     <Menu>
-        <Menu.Item name="editorials">
-            Editorials
+        <Menu.Item>
+            <Image size="mini" src={ props.logo } />
         </Menu.Item>
-
-        <Menu.Item name="reviews">
-            Reviews
-        </Menu.Item>
-
-        <Menu.Item name="upcomingEvents">
-            Upcoming Events
+        <Menu.Item>
+            { props.title_name }
         </Menu.Item>
     </Menu> );
 }
