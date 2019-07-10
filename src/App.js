@@ -1,6 +1,6 @@
 import React from "react";
-import Link from "./components/Link.js";
-import ReactLogo from "./components/ReactLogo.js";
+import Link from "./components/App/Link.js";
+import ReactLogo from "./components/App/ReactLogo.js";
 import logo from "./logo.svg";
 import "./App.css";
 
