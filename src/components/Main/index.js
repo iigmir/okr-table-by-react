@@ -12,18 +12,18 @@ const Main = () =>
     <Container>
         <Grid celled="internally">
             <Grid.Row>
-                <Grid.Column width={6}>
+                <Grid.Column width={8}>
                     <Week src={src} />
                 </Grid.Column>
-                <Grid.Column width={6}>
+                <Grid.Column width={8}>
                     <OKR src={src} />
                 </Grid.Column>
             </Grid.Row>
             <Grid.Row>
-                <Grid.Column width={6}>
+                <Grid.Column width={8}>
                     <Month src={src} />
                 </Grid.Column>
-                <Grid.Column width={6}>
+                <Grid.Column width={8}>
                     <Targets src={src} />
                 </Grid.Column>
             </Grid.Row>
