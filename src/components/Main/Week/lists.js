@@ -1,8 +1,6 @@
 import React from "react";
 import { List } from "semantic-ui-react";
 
-// let lists = [ "Apples", "Banana", props.src ];
-
 let list_component = list => list.map( (item, index) => (
     <List.Item key={index}>
         <List.Icon name="delete" />
