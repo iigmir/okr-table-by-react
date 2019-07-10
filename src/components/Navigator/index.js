@@ -2,7 +2,7 @@ import React from "react";
 import { Menu, Image } from "semantic-ui-react";
 import "./index.css";
 
-function Navigator(props)
+const Navigator = (props) =>
 {
     return (
     <Menu>
@@ -12,7 +12,8 @@ function Navigator(props)
         <Menu.Item>
             { props.title_name }
         </Menu.Item>
-    </Menu> );
-}
+    </Menu>
+    );
+};
 
 export default Navigator;
