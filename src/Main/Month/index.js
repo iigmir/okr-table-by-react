@@ -1,5 +1,6 @@
 import React from "react";
-import { Image, Header } from "semantic-ui-react";
+import { Header } from "semantic-ui-react";
+import MyList from "../components/lists.js";
 
 class Month extends React.Component {
     constructor(props)
@@ -20,7 +21,7 @@ class Month extends React.Component {
         return (
         <div id="Target">
             <Header as="h1">Monthly objects</Header>
-            <Image src={ this.state.src } />
+            <MyList list={ this.state.list } delete_item={ this.delete_item } />
         </div>
         );
     }

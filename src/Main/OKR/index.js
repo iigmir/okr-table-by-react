@@ -1,6 +1,6 @@
 import React from "react";
 import { Header } from "semantic-ui-react";
-import MyList from "./lists.js";
+import MyList from "../components/lists.js";
 
 class OKR extends React.Component {
     constructor(props)
