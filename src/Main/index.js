@@ -1,9 +1,9 @@
 import React from "react";
 import { Container, Grid } from "semantic-ui-react";
-import Week from "./Week/index.js";
-import OKR from "./OKR/index.js";
-import Month from "./Month.js";
-import Targets from "./Targets.js";
+import Week from "./Week/index.js.js";
+import OKR from "./OKR/index.js.js";
+import Month from "./Month.js.js";
+import Targets from "./Targets.js.js";
 import "./index.css";
 
 const Main = () =>
