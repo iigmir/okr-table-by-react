@@ -4,6 +4,7 @@ import Week from "./Week/index.js";
 import OKR from "./OKR/index.js";
 import Month from "./Month.js";
 import Targets from "./Targets.js";
+import "./index.css";
 
 const Main = () =>
 {
