@@ -10,7 +10,8 @@ class OKR extends React.Component {
         this.state = {
             list: [123,456,789,0],
             key_object: "Change the world!",
-            modal_actived: false
+            modal_actived: false,
+            modal_for: ""
         };
     }
     delete_item({ event, index })
@@ -28,6 +29,11 @@ class OKR extends React.Component {
         this.set_modal_actived();
         return;
     }
+    active_modal(modal_for)
+    {
+        this.set_modal_actived();
+        this.setState({modal_for});
+    }
     render()
     {
         return (
@@ -35,7 +41,7 @@ class OKR extends React.Component {
             <Header as="h1">Object</Header>
             <p>{ this.state.key_object }</p>
             <Header as="h2">Key result</Header>
-            <Button size="small" onClick={ this.set_modal_actived.bind(this) }>Add modal</Button>
+            <Button size="small" onClick={ event => this.set_modal_actived("key_result") }>Add modal</Button>
             <MyList list={ this.state.list }  />
             <TextInput open={ this.state.modal_actived } modal_response_method={ this.modal_response_method.bind(this) }/>
         </div>
