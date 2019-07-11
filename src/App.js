@@ -7,10 +7,10 @@ import logo from "./logo.svg";
 function App()
 {
     return (
-    <div>
+    <main>
         <Navigator logo={logo} title_name="OKR Sheet" />
         <Main />
-    </div>
+    </main>
     );
 }
 

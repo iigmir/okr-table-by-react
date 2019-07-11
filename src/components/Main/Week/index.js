@@ -32,9 +32,8 @@ class Week extends React.Component {
     render()
     {
         return (
-        <div>
+        <div id="Week">
             <MyList list={ this.state.list } delete_item={ this.delete_item } />
-            {/* delete_item */}
             <Form onSubmit={ this.add_tasks.bind(this) }>
                 <Form.Group inline>
                     <Form.Input defaultValue={ this.state.task_value } onChange={ this.change_task_value.bind(this) } />

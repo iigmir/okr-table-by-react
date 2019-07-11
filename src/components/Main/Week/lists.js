@@ -12,10 +12,10 @@ class MyList extends React.Component {
     render()
     {
         let list_component = list => list.map( (item, index) => (
-            <List.Item key={index}>
-                <List.Icon name="delete" onClick={ event => this.delete_item({ event, index }) }/>
-                <List.Content>{ item }</List.Content>
-            </List.Item>
+        <List.Item key={index}>
+            <List.Icon name="delete" onClick={ event => this.delete_item({ event, index }) }/>
+            <List.Content>{ item }</List.Content>
+        </List.Item>
         ) );
         return ( <List bulleted> { list_component( this.props.list ) } </List> );
     }
