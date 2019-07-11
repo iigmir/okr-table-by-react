@@ -33,7 +33,7 @@ class Week extends React.Component {
     {
         return (
         <div id="Week">
-            <Header as="h1">Weekly object</Header>
+            <Header as="h1">Weekly objects</Header>
             <MyList list={ this.state.list } delete_item={ this.delete_item } />
             <Form onSubmit={ this.add_tasks.bind(this) }>
                 <Form.Group inline>
