@@ -1,6 +1,6 @@
 import React from "react";
 import { Form, Header } from "semantic-ui-react";
-import MyList from "./lists.js.js";
+import MyList from "./lists.js";
 
 class Week extends React.Component {
     constructor(props)
