@@ -21,6 +21,11 @@ class OKR extends React.Component {
     set_modal_actived()
     {
         this.setState({ modal_actived: !this.state.modal_actived });
+    }
+    modal_response_method(response)
+    {
+        console.log(response);
+        this.set_modal_actived();
         return;
     }
     render()
@@ -32,7 +37,7 @@ class OKR extends React.Component {
             <Header as="h2">Key result</Header>
             <Button size="small" onClick={ this.set_modal_actived.bind(this) }>Add modal</Button>
             <MyList list={ this.state.list }  />
-            <TextInput open={ this.state.modal_actived } close_method={ this.set_modal_actived.bind(this) }/>
+            <TextInput open={ this.state.modal_actived } modal_response_method={ this.modal_response_method.bind(this) }/>
         </div>
         );
     }

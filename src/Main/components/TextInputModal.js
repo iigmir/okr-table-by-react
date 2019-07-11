@@ -8,26 +8,29 @@ class TextInput extends React.Component {
         this.state = {
             open: props.open
         };
-        this.close_method = props.close_method;
+        this.modal_response_method = props.modal_response_method;
+    }
+    emit_to_parent({ event, bool })
+    {
+        let content = bool === true ? "foobar" : "";
+        let r = {
+            event,
+            bool,
+            content
+        };
+        this.modal_response_method(r);
     }
     render()
     {
         return (
-        <Modal
-            open={ this.props.open }
-            closeOnDimmerClick={ false }
-        >
+        <Modal open={ this.props.open } closeOnDimmerClick={ false }>
             <Modal.Header>Delete Your Account</Modal.Header>
             <Modal.Content>
                 <p>Are you sure you want to delete your account?</p>
             </Modal.Content>
             <Modal.Actions>
-                <Button negative onClick={ this.close_method }> Discard </Button>
-                <Button positive onClick={ this.close_method }
-                    labelPosition="right"
-                    icon="checkmark"
-                    content="Submit"
-                />
+                <Button negative onClick={ event => this.emit_to_parent({ event, bool: false }) }> Discard </Button>
+                <Button positive onClick={ event => this.emit_to_parent({ event, bool:  true }) }> Submit </Button>
             </Modal.Actions>
         </Modal> );
     }
