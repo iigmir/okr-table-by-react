@@ -12,8 +12,13 @@ class MyList extends React.Component {
     {
         let liststyle = { cursor: "pointer" };
         let list_item = list => list.map( (item, index) => (
-        <List.Item key={index} style={liststyle} onClick={ event => this.delete_item({ event, index }) }>
-            <List.Icon name="delete"/> { item }
+        <List.Item key={index}>
+            <List.Icon
+                name="delete"
+                style={liststyle}
+                onClick={ event => this.delete_item({event, index}) }
+            />
+            { item }
         </List.Item>
         ) );
         return ( <List> { list_item( this.props.list ) } </List> );
