@@ -17,11 +17,7 @@ class TextInput extends React.Component {
     emit_to_parent({ event, bool })
     {
         let content = bool === true ? this.state.awaiting_value : null;
-        let payload = {
-            event,
-            bool,
-            content
-        };
+        let payload = { bool, content, event };
         this.modal_response_method(payload);
     }
     render()

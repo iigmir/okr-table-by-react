@@ -41,7 +41,7 @@ class OKR extends React.Component {
             <Header as="h1">Object</Header>
             <p>{ this.state.key_object }</p>
             <Header as="h2">Key result</Header>
-            <Button size="small" onClick={ event => this.set_modal_actived("key_result") }>Add modal</Button>
+            <Button size="small" onClick={ event => this.active_modal("key_result") }>Add modal</Button>
             <MyList list={ this.state.list }  />
             <TextInput open={ this.state.modal_actived } modal_response_method={ this.modal_response_method.bind(this) }/>
         </div>
