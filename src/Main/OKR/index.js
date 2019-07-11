@@ -31,8 +31,8 @@ class OKR extends React.Component {
     }
     active_modal(modal_for)
     {
+        this.setState({ modal_for });
         this.set_modal_actived();
-        this.setState({modal_for});
     }
     render()
     {
