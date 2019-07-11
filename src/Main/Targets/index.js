@@ -1,12 +1,13 @@
 import React from "react";
-import { Image, Header } from "semantic-ui-react";
+import { Header } from "semantic-ui-react";
+import MyList from "../components/lists.js";
 
 class Targets extends React.Component {
     constructor(props)
     {
         super(props);
         this.state = {
-            list: [123,456,789,0],
+            list: ["ofdna", "kbdfshkjsdnf erhfdsd"],
             src: props.src
         };
     }
@@ -20,7 +21,7 @@ class Targets extends React.Component {
         return (
         <div id="Target">
             <Header as="h1">Other targets</Header>
-            <Image src={ this.state.src } />
+            <MyList list={ this.state.list } delete_item={ this.delete_item } />
         </div>
         );
     }

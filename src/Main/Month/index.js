@@ -7,7 +7,7 @@ class Month extends React.Component {
     {
         super(props);
         this.state = {
-            list: [123,456,789,0],
+            list: ["123,456,789,0", "fffjk"],
             src: props.src
         };
     }
