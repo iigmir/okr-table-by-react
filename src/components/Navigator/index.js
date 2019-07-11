@@ -5,7 +5,7 @@ import "./index.css";
 const Navigator = (props) =>
 {
     return (
-    <Menu>
+    <Menu as="nav">
         <Menu.Item>
             <Image className="App-logo" size="mini" src={ props.logo } />
         </Menu.Item>

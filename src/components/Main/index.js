@@ -9,7 +9,7 @@ const Main = () =>
 {
     let src = "https://react.semantic-ui.com/images/wireframe/image.png";
     return (
-    <Container>
+    <Container as="main">
         <Grid celled="internally">
             <Grid.Row>
                 <Grid.Column width={8}>

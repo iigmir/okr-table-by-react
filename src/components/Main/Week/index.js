@@ -1,5 +1,5 @@
 import React from "react";
-import { Form } from "semantic-ui-react";
+import { Form, Header } from "semantic-ui-react";
 import MyList from "./lists.js";
 
 class Week extends React.Component {
@@ -33,6 +33,7 @@ class Week extends React.Component {
     {
         return (
         <div id="Week">
+            <Header as="h1">Weekly object</Header>
             <MyList list={ this.state.list } delete_item={ this.delete_item } />
             <Form onSubmit={ this.add_tasks.bind(this) }>
                 <Form.Group inline>
