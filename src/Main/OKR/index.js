@@ -16,12 +16,9 @@ class OKR extends React.Component {
     }
     delete_item({ event, index })
     {
-        console.log({ event, index });
-        return;
-    }
-    set_modal_actived()
-    {
-        this.setState({ modal_actived: !this.state.modal_actived });
+        let new_list = this.state.list;
+        new_list.splice(index, 1);
+        this.setState({ list: new_list });
     }
     /**
      * Do whatever actions once get response from modal
@@ -53,6 +50,10 @@ class OKR extends React.Component {
         this.setState( setted_state );
         return;
     }
+    set_modal_actived()
+    {
+        this.setState({ modal_actived: !this.state.modal_actived });
+    }
     active_modal(modal_for)
     {
         this.setState({ modal_for });
@@ -63,11 +64,11 @@ class OKR extends React.Component {
         return (
         <div id="OKR">
             <Header as="h1">Object</Header>
-            <p>{ this.state.key_object }</p>
             <Button size="mini" onClick={ event => this.active_modal("key_object") }>Add key object</Button>
+            <p>{ this.state.key_object }</p>
             <Header as="h2">Key result</Header>
-            <MyList list={ this.state.list }  />
             <Button size="mini" onClick={ event => this.active_modal("key_result") }>Add key result</Button>
+            <MyList list={ this.state.list }  />
             <TextInput open={ this.state.modal_actived } modal_response_method={ this.modal_response_method.bind(this) }/>
         </div>
         );
