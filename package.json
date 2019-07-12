@@ -1,7 +1,7 @@
 {
   "name": "okr-table",
   "version": "0.1.0",
-  "private": true,
+  "homepage": "https://iigmir.github.io/okr-table-by-react",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "react": "^16.8.6",
