@@ -13,8 +13,8 @@ class TextInput extends React.Component {
     }
     set_awaiting_value(event)
     {
-        let awaiting_value = event.target.value.trim();
-        let not_compeleted = awaiting_value.length < 1;
+        let not_compeleted = event.target.value.trim().length < 1;
+        let awaiting_value = not_compeleted ? event.target.value.trim() : event.target.value;
         this.setState({ awaiting_value, not_compeleted });
     }
     emit_to_parent({ event, bool })

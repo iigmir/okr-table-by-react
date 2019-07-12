@@ -38,17 +38,19 @@ class OKR extends React.Component {
         let setted_state = {
             modal_for: ""
         };
+        let method_actions = {
+            "key_object": {
+                prop: "key_object",
+                value: payload.content
+            },
+            "key_result": {
+                prop: "list",
+                value: [ ...this.state.list ].push( payload.content )
+            },
+        };
+        let current_modal = method_actions[ this.state.modal_for ];
         this.set_modal_actived();
-        if( payload.bool === true && this.state.modal_for === "key_result" )
-        {
-            new_list = this.state.list;
-            new_list.push( payload.content );
-            setted_state.list = new_list
-        }
-        else if ( payload.bool === true && this.state.modal_for === "key_object" )
-        {
-            setted_state.key_object = payload.content;
-        }
+        setted_state[ current_modal.prop ] = current_modal.value;
         this.setState( setted_state );
         return;
     }
