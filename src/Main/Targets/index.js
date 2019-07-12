@@ -15,9 +15,11 @@ class Targets extends React.Component {
     }
     delete_item({ event, index })
     {
-        let list = [ ...this.state.list ];
+        let list = this.state.list;
         list.splice(index, 1);
+        console.log( this.state.list );
         this.setState({ list });
+        console.log( this.state.list );
     }
     set_modal_actived()
     {
@@ -25,7 +27,6 @@ class Targets extends React.Component {
     }
     active_modal(modal_for)
     {
-        this.setState({ modal_for });
         this.set_modal_actived();
     }
     modal_response_method(payload)
