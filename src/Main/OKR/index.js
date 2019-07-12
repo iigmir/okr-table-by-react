@@ -34,16 +34,22 @@ class OKR extends React.Component {
      */
     modal_response_method(payload)
     {
+        let new_list = [];
+        let setted_state = {
+            modal_for: ""
+        };
         this.set_modal_actived();
         if( payload.bool === true && this.state.modal_for === "key_result" )
         {
-            let new_list = this.state.list;
+            new_list = this.state.list;
             new_list.push( payload.content );
-            this.setState({
-                modal_for: "",
-                list: new_list
-            });
+            setted_state.list = new_list
         }
+        else if ( payload.bool === true && this.state.modal_for === "key_object" )
+        {
+            setted_state.key_object = payload.content;
+        }
+        this.setState( setted_state );
         return;
     }
     active_modal(modal_for)
@@ -57,6 +63,7 @@ class OKR extends React.Component {
         <div id="OKR">
             <Header as="h1">Object</Header>
             <p>{ this.state.key_object }</p>
+            <Button size="mini" onClick={ event => this.active_modal("key_object") }>Add key object</Button>
             <Header as="h2">Key result</Header>
             <Button size="mini" onClick={ event => this.active_modal("key_result") }>Add key result</Button>
             <MyList list={ this.state.list }  />
