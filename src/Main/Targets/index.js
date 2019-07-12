@@ -8,7 +8,7 @@ class Targets extends React.Component {
     {
         super(props);
         this.state = {
-            list: ["ofdna", "kbdfshkjsdnf erhfdsd"],
+            list: ["Peek#1", "Peek#2", "Peek#3"],
             modal_actived: false,
             src: props.src
         };
@@ -41,8 +41,8 @@ class Targets extends React.Component {
     {
         return (
         <div id="Target">
-            <Header as="h1">Other targets</Header>
-            <Button size="mini" onClick={ event => this.active_modal("key_object") }>Add key object</Button>
+            <Header as="h1" textAlign="center">Some key signs</Header>
+            <Button size="mini" onClick={ event => this.active_modal("key_object") }>Add key signs</Button>
             <MyList list={ this.state.list } delete_item={ this.delete_item } />
             <TextInput open={ this.state.modal_actived } modal_response_method={ this.modal_response_method.bind(this) }/>
         </div>

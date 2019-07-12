@@ -7,7 +7,7 @@ class Week extends React.Component {
     {
         super(props);
         this.state = {
-            list: [ "Apples", "Banana", props.src ],
+            list: [ "First target", "Second target", "Third target" ],
             task_value: "Add weekly target for OKR"
         };
     }
@@ -32,7 +32,7 @@ class Week extends React.Component {
     {
         return (
         <div id="Week">
-            <Header as="h1">Weekly objects</Header>
+            <Header as="h1" textAlign="center">Weekly objects</Header>
             <Form onSubmit={ this.add_tasks.bind(this) }>
                 <Form.Group inline>
                     <Form.Input defaultValue={ this.state.task_value } onChange={ this.change_task_value.bind(this) } />

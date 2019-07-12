@@ -8,17 +8,17 @@ class OKR extends React.Component {
     {
         super(props);
         this.state = {
-            list: [123,456,789,0],
-            key_object: "Change the world!",
+            list: ["Doing business #1", "Doing business #2", "Doing business #3"],
+            key_object: "Do some amazing job!",
             modal_actived: false,
             modal_for: ""
         };
     }
     delete_item({ event, index })
     {
-        let new_list = this.state.list;
-        new_list.splice(index, 1);
-        this.setState({ list: new_list });
+        let list = this.state.list;
+        list.splice(index, 1);
+        this.setState({ list });
     }
     /**
      * Do whatever actions once get response from modal
@@ -63,12 +63,12 @@ class OKR extends React.Component {
     {
         return (
         <div id="OKR">
-            <Header as="h1">Object</Header>
-            <Button size="mini" onClick={ event => this.active_modal("key_object") }>Add key object</Button>
-            <p>{ this.state.key_object }</p>
-            <Header as="h2">Key result</Header>
+            <Header as="h1" textAlign="center">Object</Header>
+            <Header as="h2" textAlign="center">{ this.state.key_object }</Header>
+            <Button size="mini" onClick={ event => this.active_modal("key_object") }>Change key object</Button>
+            <Header as="h2" textAlign="center">Key result</Header>
             <Button size="mini" onClick={ event => this.active_modal("key_result") }>Add key result</Button>
-            <MyList list={ this.state.list }  />
+            <MyList list={ this.state.list } delete_item={ this.delete_item.bind(this) } />
             <TextInput open={ this.state.modal_actived } modal_response_method={ this.modal_response_method.bind(this) }/>
         </div>
         );
