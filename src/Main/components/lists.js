@@ -1,5 +1,6 @@
 import React from "react";
-import { List } from "semantic-ui-react";
+import { List, Label } from "semantic-ui-react";
+import "./lists.css";
 
 class MyList extends React.Component {
     constructor(props)
@@ -16,8 +17,12 @@ class MyList extends React.Component {
             <List.Icon
                 name="delete"
                 style={liststyle}
+                className="binding-icon"
                 onClick={ event => this.delete_item({event, index}) }
             />
+            <Label color="red" as="span" horizontal>
+                Fruit
+            </Label>
             { item }
         </List.Item>
         ) );

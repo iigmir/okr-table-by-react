@@ -1,0 +1,4 @@
+.ui.list .list > .item > i.icon, .ui.list > .item > i.icon.binding-icon {
+    display: inline-block;
+    margin-top: 0.2rem;
+}
