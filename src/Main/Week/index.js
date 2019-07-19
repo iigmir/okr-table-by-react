@@ -8,7 +8,8 @@ class Week extends React.Component {
         super(props);
         this.state = {
             list: [ "First target", "Second target", "Third target" ],
-            task_value: "Add weekly target for OKR"
+            task_value: "Add weekly target for OKR",
+            tag_list: [ ["P1"], ["P1"], ["P2"], ]
         };
     }
     add_tasks(event)
@@ -39,7 +40,7 @@ class Week extends React.Component {
                     <Form.Button content="Add weekly target" />
                 </Form.Group>
             </Form>
-            <MyList list={ this.state.list } delete_item={ this.delete_item } />
+            <MyList list={ this.state.list } tag_list={ this.state.tag_list } delete_item={ this.delete_item } />
         </div>
         );
     }
