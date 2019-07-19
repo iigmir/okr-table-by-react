@@ -12,20 +12,19 @@ class MyList extends React.Component {
     render()
     {
         let liststyle = { cursor: "pointer" };
-        let list_item = list => list.map( (item, index) => (
-        <List.Item key={index}>
-            <List.Icon
-                name="delete"
-                style={liststyle}
-                className="binding-icon"
-                onClick={ event => this.delete_item({event, index}) }
-            />
-            <Label color="red" as="span" horizontal>
-                Fruit
-            </Label>
-            { item }
-        </List.Item>
-        ) );
+        let list_item = list => list.map( (item, index) => {
+            let label = <Label color="red" as="span" horizontal> Fruit </Label>;
+            return (
+            <List.Item key={index}>
+                <List.Icon
+                    name="delete"
+                    className="binding-icon"
+                    onClick={ event => this.delete_item({event, index}) }
+                />
+                { label }
+                { item }
+            </List.Item>);
+        });
         return ( <List> { list_item( this.props.list ) } </List> );
     }
 };
