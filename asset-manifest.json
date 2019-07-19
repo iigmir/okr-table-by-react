@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/okr-table-by-react/static/css/main.2d366263.chunk.css",
-    "main.js": "/okr-table-by-react/static/js/main.cba9805b.chunk.js",
-    "main.js.map": "/okr-table-by-react/static/js/main.cba9805b.chunk.js.map",
+    "main.css": "/okr-table-by-react/static/css/main.a232388d.chunk.css",
+    "main.js": "/okr-table-by-react/static/js/main.1a501706.chunk.js",
+    "main.js.map": "/okr-table-by-react/static/js/main.1a501706.chunk.js.map",
     "runtime~main.js": "/okr-table-by-react/static/js/runtime~main.068f7b40.js",
     "runtime~main.js.map": "/okr-table-by-react/static/js/runtime~main.068f7b40.js.map",
-    "static/css/2.4941356d.chunk.css": "/okr-table-by-react/static/css/2.4941356d.chunk.css",
-    "static/js/2.d1ea1280.chunk.js": "/okr-table-by-react/static/js/2.d1ea1280.chunk.js",
-    "static/js/2.d1ea1280.chunk.js.map": "/okr-table-by-react/static/js/2.d1ea1280.chunk.js.map",
+    "static/css/2.455d1f5a.chunk.css": "/okr-table-by-react/static/css/2.455d1f5a.chunk.css",
+    "static/js/2.fa4201f7.chunk.js": "/okr-table-by-react/static/js/2.fa4201f7.chunk.js",
+    "static/js/2.fa4201f7.chunk.js.map": "/okr-table-by-react/static/js/2.fa4201f7.chunk.js.map",
     "index.html": "/okr-table-by-react/index.html",
-    "precache-manifest.c94ef38e3262dac3c0fdda50cdd997b1.js": "/okr-table-by-react/precache-manifest.c94ef38e3262dac3c0fdda50cdd997b1.js",
+    "precache-manifest.02d1c31c9a6efdcb79b453bcf1f98527.js": "/okr-table-by-react/precache-manifest.02d1c31c9a6efdcb79b453bcf1f98527.js",
     "service-worker.js": "/okr-table-by-react/service-worker.js",
-    "static/css/2.4941356d.chunk.css.map": "/okr-table-by-react/static/css/2.4941356d.chunk.css.map",
-    "static/css/main.2d366263.chunk.css.map": "/okr-table-by-react/static/css/main.2d366263.chunk.css.map",
+    "static/css/2.455d1f5a.chunk.css.map": "/okr-table-by-react/static/css/2.455d1f5a.chunk.css.map",
+    "static/css/main.a232388d.chunk.css.map": "/okr-table-by-react/static/css/main.a232388d.chunk.css.map",
     "static/media/semantic.min.css": "/okr-table-by-react/static/media/outline-icons.ef60a4f6.woff",
     "static/media/logo.svg": "/okr-table-by-react/static/media/logo.5d5d9eef.svg"
   }
